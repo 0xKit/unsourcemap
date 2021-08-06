@@ -13,7 +13,7 @@ new sourceMap.SourceMapConsumer(jsmap).then((map) => {
 			orig = map.originalPositionFor({line: node.id.loc.start.line, column: node.id.loc.start.column})
 			if (orig.name)
 				node.id.update(orig.name)
-		} else if (node.type === 'Identifier') {
+		} else if (node.type === "Identifier") {
 			orig = map.originalPositionFor({line: node.loc.start.line, column: node.loc.start.column})
 			if (orig.name)
 			  node.update(orig.name)
